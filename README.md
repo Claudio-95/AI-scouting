@@ -49,7 +49,7 @@ Inserire nella prima riga come intestazioni delle colonne:
 | Key | Value |
 |-----|-------|
 | `LLM_MODEL` | `google/gemma-3-27b-it:free` |
-| `OPENROUTER_TOKEN` | `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` |
+| `OPENROUTER_TOKEN` | `contenuto nell'email` |
 
 OpenRouter è stato scelto tra gli altri provider LLM perché concede un piano gratuito che rende disponibili alcuni modelli gratuitamente. Il modello Gemma di Google è stato scelto come buon compromesso tra prestazioni e gratuità, altri modelli scalavano il limite di token a ogni utilizzo, pur rimanendo gratuiti.
 

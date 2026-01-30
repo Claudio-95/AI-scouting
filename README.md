@@ -49,7 +49,9 @@ Inserire nella prima riga come intestazioni delle colonne:
 | Key | Value |
 |-----|-------|
 | `LLM_MODEL` | `google/gemini-3-flash-preview` |
-| `OPENROUTER_TOKEN` | `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` |
+| `OPENROUTER_TOKEN` | `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` |
+
+OpenRouter è stato scelto tra gli altri provider LLM perché concede un piano gratuito che contiene il modello Gemini di Google, il quale è stato considerato come buon compromesso tra prestazioni e gratuità.
 
 ---
 

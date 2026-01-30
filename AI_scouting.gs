@@ -4,8 +4,8 @@ const SHEET_ACCELERATORS = 'accelerators';
 const SHEET_STARTUPS = 'startups';
 
 const USER_AGENT = 'Mozilla/5.0 (AI Scouting Bot)';
-const REQUEST_TIMEOUT_MS = 20000;
-const BATCH_SIZE = 10;
+const REQUEST_TIMEOUT_MS = 30000;
+const BATCH_SIZE = 10;  // example value provided in the case study
 
 // MENU SETUP
 
@@ -129,7 +129,7 @@ function callLLM(systemPrompt, userPrompt) {
       { role: 'user', content: userPrompt }
     ],
     temperature: 0.3,
-    max_tokens: 3000  // OpenRouter free plan limitation
+    max_tokens: 5000  // OpenRouter free plan limitation
   };
 
   let res;
@@ -221,7 +221,6 @@ Example:
 
   let accelerators;
   try {
-    // Extract first JSON array from text
     const match = raw.match(/\[[\s\S]*\]/);
     if (!match) {
       Logger.log('No JSON array found');
@@ -282,6 +281,8 @@ function updateStartupsFromAccelerators() {
             accWebsite,
             st.value_proposition|| ''
           ]);
+
+          startupsMap[key] = true;  // update map to avoid duplicates
         }
       });
     } catch (e) {
@@ -301,7 +302,7 @@ No explanations. No markdown.
 An accelerator has this website:
 ${acceleratorWebsite}
 
-List startups accelerated by this accelerator (portfolio, alumni, batches).
+List ${BATCH_SIZE} startups accelerated by this accelerator (portfolio, alumni, batches).
 
 For each startup return:
 - website

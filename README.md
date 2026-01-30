@@ -1,4 +1,4 @@
-# Startup Scouting AI – Google Sheets Prototype
+# Scouting AI
 
 ## Google Sheet
 

@@ -57,32 +57,15 @@ OpenRouter è stato scelto tra gli altri provider LLM perché concede un piano g
 
 ## Utilizzo
 
-Dopo aver ricaricato il foglio, dovrebbe comparire la seguente opzione come ultima nella barra degli strumenti:
-
-**Startup Scouting AI**
+Dopo aver ricaricato il foglio, dovrebbe comparire l'opzione **Startup Scouting AI** come ultima nella barra degli strumenti.
 
 ---
 
 ## Assunzioni e Limiti del Prototipo
 
-- Il sistema è pensato come **tool di scouting**, non come crawler completo;
 - Il parsing HTML è leggero e può non trovare nulla su siti complessi;
 - Il parsing nel processo dei dati può fallire e dipende dalla correttezza dell'output generato dall'LLM;
 - Le informazioni generate dall’LLM sono **best-effort**;
-- Batch ridotti per rispettare i limiti di esecuzione di Apps Script;
+- Batch ridotti per rispettare i limiti di esecuzione di Apps Script e del provider LLM;
 - Nessun retry automatico;
 - `website` è assunto come identificatore univoco affidabile.
-
----
-
-## Note Finali
-
-Il prototipo privilegia:
-- semplicità
-- robustezza
-- spiegabilità delle scelte tecniche
-
-È progettato per essere facilmente estendibile verso:
-- pipeline più strutturate
-- normalizzazione dei dati
-- revisione manuale dei risultati
